@@ -10,7 +10,7 @@ import {
 
 /**
  * ============================================================================
- * SIGMA TOWN RULES — FUTURE 2126 (CORE ARCHITECTURE & SUPABASE INTEGRATION)
+ * SIGMA TOWN RULES — FUTURE 2026 (CORE ARCHITECTURE & SUPABASE INTEGRATION)
  * ============================================================================
  * - Zero hardcoded passwords or service_role keys.
  * - Real Supabase Auth & Realtime PostgREST integration via CDN/window.supabase
