@@ -24,7 +24,7 @@ import {
 // 1. DELIVERABLE BLUEPRINTS (SQL SCHEMA, RLS, ENV, DEPLOYMENT & ADMIN GUIDES)
 // ----------------------------------------------------------------------------
 const SUPABASE_SQL_SCHEMA = `-- ============================================================================
--- SIGMA TOWN RULES — FUTURE 2126 | SUPABASE POSTGRESQL SCHEMA & RLS SECURITY
+-- SIGMA TOWN RULES — FUTURE 2026 | SUPABASE POSTGRESQL SCHEMA & RLS SECURITY
 -- Run this entire script in your Supabase Dashboard -> SQL Editor -> New Query
 -- ============================================================================
 
@@ -102,10 +102,10 @@ CREATE TABLE IF NOT EXISTS public.website_settings (
   id INTEGER PRIMARY KEY DEFAULT 1 CHECK (id = 1),
   site_name TEXT NOT NULL DEFAULT 'SIGMA TOWN RULES',
   logo_url TEXT DEFAULT '',
-  hero_title TEXT NOT NULL DEFAULT 'SIGMA TOWN DIRECTIVES // 2126',
-  site_description TEXT NOT NULL DEFAULT 'ศูนย์รวมกฎระเบียบและข้อบังคับอย่างเป็นทางการแห่งมหานคร Sigma Town ยุค 2126',
+  hero_title TEXT NOT NULL DEFAULT 'SIGMA TOWN DIRECTIVES // 2026',
+  site_description TEXT NOT NULL DEFAULT 'ศูนย์รวมกฎระเบียบและข้อบังคับอย่างเป็นทางการแห่งมหานคร Sigma Town ยุค 2026',
   welcome_message TEXT NOT NULL DEFAULT 'ยินดีต้อนรับพลเมืองทุกท่าน กรุณาศึกษากฎระเบียบอย่างเคร่งครัดเพื่อความสงบสุขของเมือง',
-  footer_text TEXT NOT NULL DEFAULT '© 2126 SIGMA TOWN METROPOLIS. ALL CITIZEN PROTOCOLS ENFORCED.',
+  footer_text TEXT NOT NULL DEFAULT '© 2026 SIGMA TOWN METROPOLIS. ALL CITIZEN PROTOCOLS ENFORCED.',
   bg_image_url TEXT DEFAULT '',
   bg_color TEXT NOT NULL DEFAULT '#07070B',
   text_color TEXT NOT NULL DEFAULT '#FFFFFF',
@@ -197,7 +197,7 @@ ALTER PUBLICATION supabase_realtime ADD TABLE public.rules, public.categories, p
 `;
 
 const ENV_EXAMPLE_CONTENT = `# ============================================================================
-# SIGMA TOWN RULES — FUTURE 2126 | ENVIRONMENT VARIABLES (.env.local)
+# SIGMA TOWN RULES — FUTURE 2026 | ENVIRONMENT VARIABLES (.env.local)
 # NEVER commit .env.local to GitHub! Add .env* to .gitignore
 # NEVER expose SUPABASE_SERVICE_ROLE_KEY in frontend code!
 # ============================================================================
@@ -222,7 +222,7 @@ WHERE email = 'your-admin-email@domain.com';
 SELECT id, email, display_name, role, created_at FROM public.profiles WHERE role = 'admin';
 `;
 
-const DEPLOYMENT_GUIDE_MD = `# 🚀 SIGMA TOWN RULES — DEPLOYMENT & OPERATIONS MANUAL (2126 EDITION)
+const DEPLOYMENT_GUIDE_MD = `# 🚀 SIGMA TOWN RULES — DEPLOYMENT & OPERATIONS MANUAL (2026 EDITION)
 
 ## 1. Supabase Backend Setup
 1. Create a free project at **https://supabase.com**.
@@ -277,12 +277,12 @@ const FONT_OPTIONS = {
     { id: 'Prompt', label: 'Prompt (ทันสมัย อ่านง่าย สมดุล)' },
     { id: 'Kanit', label: 'Kanit (โปร่ง คมชัด สไตล์โมเดิร์น)' },
     { id: 'Sarabun', label: 'Sarabun (ทางการ อ่านสบายตา)' },
-    { id: 'Chakra Petch', label: 'Chakra Petch (ไซไฟ ล้ำยุค 2126)' },
+    { id: 'Chakra Petch', label: 'Chakra Petch (ไซไฟ ล้ำยุค)' },
     { id: 'IBM Plex Sans Thai', label: 'IBM Plex Sans Thai (พรีเมียม เทคโนโลยี)' },
     { id: 'Noto Sans Thai', label: 'Noto Sans Thai (มาตรฐานสากล)' }
   ],
   heading: [
-    { id: 'Orbitron', label: 'Orbitron (Futuristic Cyber 2126)' },
+    { id: 'Orbitron', label: 'Orbitron (Futuristic Cyber)' },
     { id: 'Rajdhani', label: 'Rajdhani (Tech Tactical HUD)' },
     { id: 'Chakra Petch', label: 'Chakra Petch (Sci-Fi ไทย + อังกฤษ)' },
     { id: 'Audiowide', label: 'Audiowide (Neon Synthwave)' },
@@ -388,13 +388,13 @@ const DEFAULT_RULES = [
 
 const DEFAULT_LINKS = [
   { id: 'lnk-1', label: 'DISCORD SERVER', url: 'https://discord.com', description: 'เข้าร่วมชุมชนและติดต่อทีมงาน Sigma Town', icon_name: 'Radio', sort_order: 1, is_active: true },
-  { id: 'lnk-2', label: 'CONNECT CITY', url: 'https://cfx.re', description: 'เชื่อมต่อเข้าสู่เซิร์ฟเวอร์หลัก Sigma Town 2126', icon_name: 'Zap', sort_order: 2, is_active: true },
+  { id: 'lnk-2', label: 'CONNECT CITY', url: 'https://cfx.re', description: 'เชื่อมต่อเข้าสู่เซิร์ฟเวอร์หลัก Sigma Town 2026', icon_name: 'Zap', sort_order: 2, is_active: true },
   { id: 'lnk-3', label: 'CITIZEN PORTAL', url: 'https://example.com', description: 'ตรวจสอบสถานะพลเมืองและใบอนุญาต', icon_name: 'Globe', sort_order: 3, is_active: true },
   { id: 'lnk-4', label: 'REPORT CENTER', url: 'https://example.com/report', description: 'แจ้งปัญหา ร้องเรียน และส่งหลักฐาน', icon_name: 'ShieldAlert', sort_order: 4, is_active: true }
 ];
 
 const INITIAL_AUDIT_LOGS = [
-  { id: 'log-1', actor_email: 'system@sigmatown.gg', action: 'SYSTEM_INIT', target_table: 'website_settings', target_summary: 'Initialized Sigma Town 2126 Core Directive Matrix', created_at: new Date(Date.now() - 1000 * 60 * 120).toISOString() },
+  { id: 'log-1', actor_email: 'system@sigmatown.gg', action: 'SYSTEM_INIT', target_table: 'website_settings', target_summary: 'Initialized Sigma Town 2026 Core Directive Matrix', created_at: new Date(Date.now() - 1000 * 60 * 120).toISOString() },
   { id: 'log-2', actor_email: 'architect@sigmatown.gg', action: 'UPDATE_RULE', target_table: 'rules', target_summary: 'Updated [CMB-01] Safe Zones & Green Zones protocol', created_at: new Date(Date.now() - 1000 * 60 * 20).toISOString() }
 ];
 
@@ -516,7 +516,7 @@ export default function App() {
     }, 4200);
   };
 
-  // Load Google Fonts (Thai + 2126 Sci-Fi) & Supabase JS CDN
+  // Load Google Fonts (Thai + 2026 Sci-Fi) & Supabase JS CDN
   useEffect(() => {
     const fontLink = document.createElement('link');
     fontLink.rel = 'stylesheet';
@@ -1002,7 +1002,7 @@ export default function App() {
   // Export JSON Backup
   const handleExportBackup = () => {
     const backupPayload = {
-      system: 'SIGMA_TOWN_RULES_2126',
+      system: 'SIGMA_TOWN_RULES_2026',
       exported_at: new Date().toISOString(),
       website_settings: settings,
       categories,
@@ -1028,7 +1028,7 @@ export default function App() {
     reader.onload = (event) => {
       try {
         const parsed = JSON.parse(event.target.result);
-        if (parsed.system !== 'SIGMA_TOWN_RULES_2126' || !Array.isArray(parsed.rules) || !Array.isArray(parsed.categories)) {
+        if (parsed.system !== 'SIGMA_TOWN_RULES_2026' || !Array.isArray(parsed.rules) || !Array.isArray(parsed.categories)) {
           throw new Error('รูปแบบไฟล์สำรองข้อมูลไม่ถูกต้องหรือไม่ใช่ไฟล์ของ Sigma Town Rules');
         }
 
@@ -1271,7 +1271,7 @@ export default function App() {
       )}
 
       {/* ====================================================================
-          TOP NAVIGATION BAR (FUTURISTIC 2126 HUD)
+          TOP NAVIGATION BAR (FUTURISTIC 2026 HUD)
       ==================================================================== */}
       <header className="sticky top-0 z-40 glass-panel border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
@@ -1307,7 +1307,7 @@ export default function App() {
                     backgroundColor: `${activeTheme.primary_color}18`
                   }}
                 >
-                  2126
+                  2026
                 </span>
               </div>
               <p className="text-[11px] text-gray-400 font-tech tracking-widest uppercase">
@@ -2601,7 +2601,7 @@ export default function App() {
                             type="url"
                             value={draftSettings.logo_url || ''}
                             onChange={(e) => setDraftSettings({ ...draftSettings, logo_url: e.target.value })}
-                            placeholder="https://... (เว้นว่างเพื่อใช้โลโก้ Shield 2126)"
+                            placeholder="https://... (เว้นว่างเพื่อใช้โลโก้ Shield 2026)"
                             className="w-full px-3.5 py-2.5 rounded-xl bg-black/60 border border-white/15 text-sm text-white"
                           />
                         </div>
@@ -2697,7 +2697,7 @@ export default function App() {
                           type="url"
                           value={draftSettings.bg_image_url || ''}
                           onChange={(e) => setDraftSettings({ ...draftSettings, bg_image_url: e.target.value })}
-                          placeholder="https://... (เว้นว่างเพื่อใช้พื้นหลัง Cyber Grid 2126)"
+                          placeholder="https://... (เว้นว่างเพื่อใช้พื้นหลัง Cyber Grid 2026)"
                           className="w-full px-3.5 py-2.5 rounded-xl bg-black/60 border border-white/15 text-sm text-white"
                         />
                       </div>
